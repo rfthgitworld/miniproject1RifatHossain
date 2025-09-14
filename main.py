@@ -17,6 +17,15 @@
 
 import yfinance as yf
 import pprint
-dat = yf.Ticker("MSFT")
+import numpy as np
+import matplotlib.pyplot as plt
 
-pprint.pprint(dat.info)
+myStocks = ['MSFT','AMZN','NVDA','QBTS','ORCL']
+stockInfo = {}
+
+for stock in myStocks:
+    dat = yf.Ticker(stock)
+    last10days = dat.history(period='10d')
+    stockInfo[stock] = []
+    for price in last10days['Close']:
+        stockInfo[stock].append(price)
