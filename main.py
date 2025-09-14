@@ -1,6 +1,7 @@
 # INF601 - Advanced Programming in Python
 # Rifat Hossain
 # Mini Project 1
+import copy
 
 # This project will be using the packages NumPy and Matplotlib in order to create 5 graphs that output as PNG files.
 #
@@ -23,10 +24,24 @@ import matplotlib.pyplot as plt
 myStocks = ['MSFT','AMZN','NVDA','QBTS','ORCL']
 stockInfo = {}
 
+# collected the closing price of 5 of my favorite stock tickers for the last 10 trading days.
 for stock in myStocks:
     dat = yf.Ticker(stock)
     last10days = dat.history(period='10d')
     stockInfo[stock] = []
+
+    # Last 10 trading days price in a list
     for price in last10days['Close']:
         stockInfo[stock].append(price)
-    stockarray = np.array(stockInfo[stock])
+    stockarray = np.array(stockInfo[stock]) # converted to an array
+
+    # Create variable to determine HIGH and LOW price for y-axis
+    high_low = copy.copy(stockInfo[stock])
+    high_low.sort()
+
+    # Create graphs for my data
+    plt.plot(stockarray)
+    plt.axis((0, 10, high_low[0]-10, high_low[-1]+10))
+    plt.ylabel('Closing Price')
+    plt.xlabel('Last 10 Trading Days')
+    plt.show()
