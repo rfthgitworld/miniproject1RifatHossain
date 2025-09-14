@@ -29,3 +29,4 @@ for stock in myStocks:
     stockInfo[stock] = []
     for price in last10days['Close']:
         stockInfo[stock].append(price)
+    stockarray = np.array(stockInfo[stock])
