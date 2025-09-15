@@ -44,4 +44,7 @@ for stock in myStocks:
     plt.axis((0, 10, high_low[0]-10, high_low[-1]+10))
     plt.ylabel('Closing Price')
     plt.xlabel('Last 10 Trading Days')
-    plt.show()
+    plt.title(stock)
+
+    # Save the figure to a file under /charts folder
+    plt.savefig(f'charts/{stock}.png')
