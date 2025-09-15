@@ -20,6 +20,10 @@ import yfinance as yf
 import pprint
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
+
+# Create charts dir to place the plots
+Path(r'charts').mkdir(exist_ok=True)
 
 myStocks = ['MSFT','AMZN','NVDA','QBTS','ORCL']
 stockInfo = {}
