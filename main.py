@@ -53,3 +53,8 @@ for stock in myStocks:
 
     # Save the figure to a file under /charts folder
     plt.savefig(f'charts/{stock}.png')
+    print(f'{stock}.png saved to charts directory')
+
+print("*" * 60)
+print(f"All done. Please check the graphs under /charts directory.")
+print("*" * 60)
