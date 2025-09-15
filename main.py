@@ -1,7 +1,7 @@
 # INF601 - Advanced Programming in Python
 # Rifat Hossain
 # Mini Project 1
-import copy
+
 
 # This project will be using the packages NumPy and Matplotlib in order to create 5 graphs that output as PNG files.
 #
@@ -18,6 +18,7 @@ import copy
 
 import yfinance as yf
 import pprint
+import copy
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
