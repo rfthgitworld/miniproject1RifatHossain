@@ -5,64 +5,42 @@
  
 # Project Title
  
-Simple overview of use/purpose.
+Mini project 1: Closing Price for Stocks
  
 ## Description
  
-An in-depth paragraph about your project and overview of use.
+This program will lookup 5 stock tickers and will provide the closing price for last 10 trading days. It will also automatically create graphs for visual representation of those stock data. 
  
 ## Getting Started
  
 ### Dependencies
- 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
-* List pip install instructions.
- 
-### Installing
- 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+
+Please install the pip requirements:
+
+```
+pip install -r requirements.txt
+```
  
 ### Executing program
  
-* How to run the program
-* Step-by-step bullets
+Run the program
+
 ```
-code blocks for commands
+python main.py
 ```
- 
-## Help
- 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
- 
+
 ## Authors
- 
-Contributors names and contact info
- 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+
+Rifat Hossain
  
 ## Version History
  
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
  
-## License
- 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
- 
+
 ## Acknowledgments
  
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [Matplotlib Documentation](https://matplotlib.org/stable/tutorials/index.html)
+* [Numpy Documentation](https://numpy.org/doc/stable/user/quickstart.html)
+* [Yfinance Documentation](https://ranaroussi.github.io/yfinance/index.html)
